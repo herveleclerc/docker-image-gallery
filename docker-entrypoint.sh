@@ -3,7 +3,10 @@
 set -euo pipefail
 
 rm -rf /usr/share/nginx/html
-/fgallery/fgallery -v -j3 /images /usr/share/nginx/html/ "${GALLERY_TITLE:-Gallery}"
+if ! /fgallery/fgallery -v -j3 /images /usr/share/nginx/html/ "${GALLERY_TITLE:-Gallery}"; then
+  mkdir -p /usr/share/nginx/html
+  cp -v /noimages.html /usr/share/nginx/html/index.html
+fi
 
 chmod a+rX /usr/share/nginx/html
 

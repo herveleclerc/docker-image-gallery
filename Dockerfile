@@ -14,6 +14,7 @@ RUN mkdir /fgallery \
 
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
+COPY noimages.html /
 
 VOLUME /images
 WORKDIR /images
