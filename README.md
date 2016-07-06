@@ -1,8 +1,8 @@
-Simple Image Gallary
+Simple Image Gallery
 ====================
 
 A simple way photo gallery container using
-[FGallary](https://github.com/wavexx/fgallery).
+[FGallery](https://github.com/wavexx/fgallery).
 
 Usage
 -----
